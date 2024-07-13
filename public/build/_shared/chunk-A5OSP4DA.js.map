@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/components/common/InlineAvatar.tsx"],
+  "sourcesContent": ["import React from \"react\";\nimport { Avatar, Space, Typography } from \"antd\";\nconst { Title } = Typography;\n\ninterface InlineAvatarProps {\n  avatarUrl?: string;\n  avatarSize?: number;\n  title: React.ReactNode;\n  titleLevel?: 1 | 2 | 3 | 4 | 5;\n  subtitle?: React.ReactNode;\n}\n\nexport const InlineAvatar: React.FC<InlineAvatarProps> = (\n  props: InlineAvatarProps\n) => {\n  const { avatarUrl, avatarSize, title, titleLevel, subtitle } = props;\n  return (\n    <Space size={10} style={{ alignItems: \"center\" }}>\n      {avatarUrl && (\n        <Avatar src={avatarUrl} size={avatarSize ? avatarSize : 60} />\n      )}\n      <Space direction=\"vertical\" size={0}>\n        <Title level={titleLevel ? titleLevel : 5} style={{ margin: 0 }}>\n          {title}\n        </Title>\n        {subtitle && subtitle}\n      </Space>\n    </Space>\n  );\n};\n"],
+  "mappings": ";;;;;;;;;;;;;AAmBQ;AAjBR,IAAM,EAAE,MAAM,IAAI;AAUX,IAAM,eAA4C,CACvD,UACG;AACH,QAAM,EAAE,WAAW,YAAY,OAAO,YAAY,SAAS,IAAI;AAC/D,SACE,mDAAC,iBAAM,MAAM,IAAI,OAAO,EAAE,YAAY,SAAS,GAC5C;AAAA,iBACC,mDAAC,kBAAO,KAAK,WAAW,MAAM,aAAa,aAAa,MAAxD;AAAA;AAAA;AAAA;AAAA,WAA4D;AAAA,IAE9D,mDAAC,iBAAM,WAAU,YAAW,MAAM,GAChC;AAAA,yDAAC,SAAM,OAAO,aAAa,aAAa,GAAG,OAAO,EAAE,QAAQ,EAAE,GAC3D,mBADH;AAAA;AAAA;AAAA;AAAA,aAEA;AAAA,MACC,YAAY;AAAA,SAJf;AAAA;AAAA;AAAA;AAAA,WAKA;AAAA,OATF;AAAA;AAAA;AAAA;AAAA,SAUA;AAEJ;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/contexts/AuthContext.tsx"],
+  "sourcesContent": ["import React from \"react\";\n\ninterface AuthContextData {\n  user: any;\n  logout: () => void;\n  openLoginModal: () => void;\n  clickedId?: string;\n  isStickerDrop?: boolean;\n}\n\nexport const AuthContext = React.createContext<AuthContextData>({\n  user: null,\n  logout: () => {},\n  openLoginModal: () => {},\n  clickedId: undefined,\n  isStickerDrop: false,\n});\n"],
+  "mappings": ";;;;;;;;AAAA,mBAAkB;AAUX,IAAM,cAAc,aAAAA,QAAM,cAA+B;AAAA,EAC9D,MAAM;AAAA,EACN,QAAQ,MAAM;AAAA,EAAC;AAAA,EACf,gBAAgB,MAAM;AAAA,EAAC;AAAA,EACvB,WAAW;AAAA,EACX,eAAe;AACjB,CAAC;",
+  "names": ["React"]
+}

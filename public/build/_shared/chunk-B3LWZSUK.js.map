@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/components/common/Author.tsx"],
+  "sourcesContent": ["import { Avatar, Space } from \"antd\";\n\ninterface AuthorProps {\n  children: any;\n  avatarSize?: number;\n  displayImage?: string;\n  fontSize?: number;\n}\n\nexport function Author(props: AuthorProps) {\n  const { children, avatarSize, displayImage, fontSize } = props;\n\n  return (\n    <Space\n      direction=\"horizontal\"\n      size={5}\n      style={fontSize ? { fontSize: fontSize } : undefined}\n    >\n      <Avatar\n        size={avatarSize ? avatarSize : 22}\n        src={displayImage ? displayImage : null}\n      >\n        {children}\n      </Avatar>\n      {children}\n    </Space>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;;AAkBM;AATC,SAAS,OAAO,OAAoB;AACzC,QAAM,EAAE,UAAU,YAAY,cAAc,SAAS,IAAI;AAEzD,SACE;AAAA,IAAC;AAAA;AAAA,MACC,WAAU;AAAA,MACV,MAAM;AAAA,MACN,OAAO,WAAW,EAAE,SAAmB,IAAI;AAAA,MAE3C;AAAA;AAAA,UAAC;AAAA;AAAA,YACC,MAAM,aAAa,aAAa;AAAA,YAChC,KAAK,eAAe,eAAe;AAAA,YAElC;AAAA;AAAA,UAJH;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,QAKA;AAAA,QACC;AAAA;AAAA;AAAA,IAXH;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,EAYA;AAEJ;",
+  "names": []
+}

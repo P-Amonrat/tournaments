@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/contexts/AppContext.tsx"],
+  "sourcesContent": ["import React from \"react\";\n\ninterface AppContextValues {\n  allowCookies: boolean;\n  baseUrl: string;\n  locale: string;\n  scheme: string;\n  acceptCookies: (accepted: boolean) => void;\n  changeLanguage: (language: string) => void;\n  changeScheme: (scheme: string) => void;\n}\n\nexport const AppContext = React.createContext<AppContextValues>({\n  allowCookies: false,\n  baseUrl: \"\",\n  locale: \"en\",\n  scheme: \"light\",\n  acceptCookies: () => {},\n  changeLanguage: () => {},\n  changeScheme: () => {},\n});\n"],
+  "mappings": ";;;;;;;;AAAA,mBAAkB;AAYX,IAAM,aAAa,aAAAA,QAAM,cAAgC;AAAA,EAC9D,cAAc;AAAA,EACd,SAAS;AAAA,EACT,QAAQ;AAAA,EACR,QAAQ;AAAA,EACR,eAAe,MAAM;AAAA,EAAC;AAAA,EACtB,gBAAgB,MAAM;AAAA,EAAC;AAAA,EACvB,cAAc,MAAM;AAAA,EAAC;AACvB,CAAC;",
+  "names": ["React"]
+}

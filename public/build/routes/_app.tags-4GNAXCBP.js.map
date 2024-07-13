@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/_app.tags.tsx"],
+  "sourcesContent": ["import { json, type LoaderFunction } from \"@remix-run/node\";\nimport { Outlet } from \"@remix-run/react\";\nimport * as APIServer from \"~/api\";\n\nexport const loader: LoaderFunction = async ({ request }) => {\n  let rooms: any[] = [];\n  let games: any[] = [];\n  let tags: any[] = [];\n  let reactionOptions: any[] = [];\n  try {\n    const roomRes = await APIServer.clientFromSession().request(\n      APIServer.getWebboardRooms()\n    );\n    const gameRes = await APIServer.clientFromSession().request(\n      APIServer.getGames()\n    );\n    const tagRes = await APIServer.clientFromSession().request(\n      APIServer.getWebboardTags({ popular: true })\n    );\n    const reactionRes = await APIServer.clientFromSession().request(\n      APIServer.getReactions()\n    );\n    if (roomRes.data) {\n      rooms = roomRes.data;\n    }\n    if (gameRes.data) {\n      games = gameRes.data;\n    }\n    if (tagRes.data) {\n      tags = tagRes.data;\n    }\n    if (reactionRes.data) {\n      reactionOptions = reactionRes.data;\n    }\n  } catch (e) {\n    console.log(\"tag single error\", e);\n  }\n  return json({ rooms, games, reactionOptions, tags });\n};\n\nexport default function TagsLayout() {\n  return <Outlet />;\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA,kBAA0C;AAyCjC;AADM,SAAR,aAA8B;AACnC,SAAO,mDAAC,YAAD;AAAA;AAAA;AAAA;AAAA,SAAQ;AACjB;",
+  "names": []
+}

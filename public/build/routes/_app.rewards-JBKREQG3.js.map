@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/_app.rewards.tsx"],
+  "sourcesContent": ["import type { LoaderFunction } from \"@remix-run/node\";\nimport { redirect } from \"@remix-run/node\";\n\nexport const loader: LoaderFunction = async ({ request }) => {\n  return redirect(\"/coming-soon\");\n};\n\nexport default function Rewards() {\n  return (\n    <div>\n      <h1>{\"this is rewards center page\"}</h1>\n    </div>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;AACA,kBAAyB;AASnB;AAHS,SAAR,UAA2B;AAChC,SACE,mDAAC,SACC,6DAAC,QAAI,2CAAL;AAAA;AAAA;AAAA;AAAA,SAAmC,KADrC;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": []
+}

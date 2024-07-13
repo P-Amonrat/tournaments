@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/components/common/Loading.tsx"],
+  "sourcesContent": ["import { theme } from \"antd\";\nconst { useToken } = theme;\n\nexport function Loading() {\n  const { token } = useToken();\n\n  return (\n    <div\n      style={{\n        position: \"absolute\",\n        top: \"50%\",\n        left: \"50%\",\n        width: 300,\n        height: 30,\n        backgroundColor: token.colorBgContainer,\n        backgroundImage: \"url('/image/stripe.png')\",\n        backgroundRepeat: \"repeat\",\n        backgroundSize: \"cover\",\n        transform: \"translate(-50%,-50%)\",\n        animation: \"loadingStripe 15s linear infinite\",\n        zIndex: 100,\n      }}\n    />\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;AAOI;AANJ,IAAM,EAAE,SAAS,IAAI;AAEd,SAAS,UAAU;AACxB,QAAM,EAAE,MAAM,IAAI,SAAS;AAE3B,SACE;AAAA,IAAC;AAAA;AAAA,MACC,OAAO;AAAA,QACL,UAAU;AAAA,QACV,KAAK;AAAA,QACL,MAAM;AAAA,QACN,OAAO;AAAA,QACP,QAAQ;AAAA,QACR,iBAAiB,MAAM;AAAA,QACvB,iBAAiB;AAAA,QACjB,kBAAkB;AAAA,QAClB,gBAAgB;AAAA,QAChB,WAAW;AAAA,QACX,WAAW;AAAA,QACX,QAAQ;AAAA,MACV;AAAA;AAAA,IAdF;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,EAeA;AAEJ;",
+  "names": []
+}

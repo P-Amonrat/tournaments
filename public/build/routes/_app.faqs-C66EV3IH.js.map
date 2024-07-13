@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/_app.faqs.tsx"],
+  "sourcesContent": ["export default function FAQs() {\n  return (\n    <div>\n      <h1>{\"this is FAQs page\"}</h1>\n    </div>\n  );\n}\n"],
+  "mappings": ";;;;;;;;AAGM;AAHS,SAAR,OAAwB;AAC7B,SACE,mDAAC,SACC,6DAAC,QAAI,iCAAL;AAAA;AAAA;AAAA;AAAA,SAAyB,KAD3B;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": []
+}

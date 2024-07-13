@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/_app.coming-soon.tsx"],
+  "sourcesContent": ["import { useContext } from \"react\";\nimport { AppContext } from \"~/contexts\";\n\nexport default function ComingSoon() {\n  const { scheme } = useContext(AppContext);\n  return (\n    <div\n      style={{\n        position: \"absolute\",\n        top: 0,\n        left: 0,\n        width: \"100%\",\n        height: \"100%\",\n        backgroundImage: `url(\"/image/comingsoon-${scheme}.jpg\")`,\n        backgroundSize: \"cover\",\n        backgroundPosition: \"center center\",\n        backgroundRepeat: \"no-repeat\",\n      }}\n    />\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;;AAAA,mBAA2B;AAMvB;AAHW,SAAR,aAA8B;AACnC,QAAM,EAAE,OAAO,QAAI,yBAAW,UAAU;AACxC,SACE;AAAA,IAAC;AAAA;AAAA,MACC,OAAO;AAAA,QACL,UAAU;AAAA,QACV,KAAK;AAAA,QACL,MAAM;AAAA,QACN,OAAO;AAAA,QACP,QAAQ;AAAA,QACR,iBAAiB,0BAA0B;AAAA,QAC3C,gBAAgB;AAAA,QAChB,oBAAoB;AAAA,QACpB,kBAAkB;AAAA,MACpB;AAAA;AAAA,IAXF;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,EAYA;AAEJ;",
+  "names": []
+}

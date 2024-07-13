@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/_app.webboards.tsx"],
+  "sourcesContent": ["import { json, type LoaderFunction } from \"@remix-run/node\";\nimport { Outlet, useNavigation } from \"@remix-run/react\";\nimport * as APIServer from \"~/api\";\n\nexport const loader: LoaderFunction = async ({ request }) => {\n  let rooms: any[] = [];\n  let games: any[] = [];\n  let tags: any[] = [];\n  let allTags: any[] = [];\n  let reactionOptions: any[] = [];\n\n  try {\n    const webboardsInfoRes = await APIServer.clientFromSession().request(\n      APIServer.getWebboardsInfo()\n    );\n    if (webboardsInfoRes.data) {\n      games = webboardsInfoRes.data.games;\n      rooms = webboardsInfoRes.data.rooms;\n      reactionOptions = webboardsInfoRes.data.reactions;\n      tags = webboardsInfoRes.data.popularTags;\n      allTags = webboardsInfoRes.data.tags;\n    }\n  } catch (e) {\n    console.log(\"webboard index error\", e);\n  }\n\n  return json({ rooms, games, reactionOptions, tags, allTags });\n};\n\nexport default function WebboardLayout() {\n  return <Outlet />;\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA,kBAA0C;AA8BjC;AADM,SAAR,iBAAkC;AACvC,SAAO,mDAAC,YAAD;AAAA;AAAA;AAAA;AAAA,SAAQ;AACjB;",
+  "names": []
+}
